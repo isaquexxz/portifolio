@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do código-fonte do meu portfólio pessoal! Este site foi desenvolvido para apresentar minha trajetória, paixão por desenvolvimento Back-End e competências técnicas.
 
-**Visite o site (URL após o Deploy na Vercel):** https://[SUA_URL_VERCEL_AQUI].vercel.app/
+**Visite o site:** https://portifolio-chi-blush-67.vercel.app/
 
 ---
 

@@ -435,7 +435,7 @@
                             </div>
                             <div id="error-message"
                                 class="mb-4 p-4 rounded-lg hidden text-center font-bold text-white bg-red-500">
-                                Por favor, preencha todos os campos corretamente, incluindo um e-mail válido.
+                                Por favor, preencha todos os campos e verifique sua conexão.
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -572,15 +572,20 @@
             const form = this;
             const successMessage = document.getElementById('success-message');
             const errorMessage = document.getElementById('error-message');
+            const submitButton = form.querySelector('button[type="submit"]');
 
             // Esconde quaisquer mensagens anteriores
             successMessage.classList.add('hidden');
             errorMessage.classList.add('hidden');
+            submitButton.disabled = true; // Desabilita o botão para evitar cliques duplicados
+            submitButton.textContent = 'Enviando...';
 
             // 2. Validação nativa do HTML5
             if (!form.checkValidity()) {
                 errorMessage.classList.remove('hidden');
-                form.reportValidity(); // Mostra as dicas de ferramenta (tooltips) do navegador
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar Mensagem';
+                form.reportValidity(); 
                 return;
             }
 
@@ -610,14 +615,18 @@
                         successMessage.classList.add('hidden');
                     }, 5000);
                 } else {
-                    // Trata erros de envio do Formspree
-                    errorMessage.textContent = 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.';
+                    // Trata erros de envio do Formspree (e.g., erro de validação do lado deles)
+                    errorMessage.textContent = 'Ocorreu um erro ao enviar a mensagem. Por favor, verifique os campos.';
                     errorMessage.classList.remove('hidden');
                 }
             } catch (error) {
                 // Trata erros de rede
                 errorMessage.textContent = 'Erro de conexão. Verifique sua rede e tente novamente.';
                 errorMessage.classList.remove('hidden');
+            } finally {
+                // 6. Restaura o estado do botão
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar Mensagem';
             }
         });
     </script>
