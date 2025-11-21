@@ -1,0 +1,145 @@
+body {
+            /* Define a família da fonte padrão*/
+            font-family: 'Open Sans', 'Roboto', 'Lato', Arial, sans-serif;
+            /* Cor de fundo principal*/
+            background-color: #F3F4F6;
+            /* Cor de texto padrão*/
+            color: #3E3142;
+            /* Adiciona padding à esquerda para compensar a barra lateral fixa (w-64 = 256px) */
+            padding-left: 256px;
+        }
+
+        /* Media Query: Estilos aplicados em telas de até 768px (móvel/tablet) */
+        @media (max-width: 768px) {
+            body {
+                padding-left: 0;
+            }
+        }
+
+        /* Estilo para o fundo da seção "Início" */
+        .hero-bg {
+            /* Aplica um gradiente preto semi-transparente sobre a imagem 'fundo.jpg' */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fundo.jpg');
+            /* Garante que a imagem cubra toda a área */
+            background-size: cover;
+            /* Centraliza a imagem de fundo */
+            background-position: center;
+        }
+
+        /* Define a cor de fundo para a classe customizada 'primary-dark' (preto) */
+        .bg-primary-dark {
+            background-color: #000000;
+        }
+
+        /* Define a cor de fundo no hover para a classe customizada 'primary-red-dark' (vermelho escuro) */
+        .hover\:bg-primary-red-dark:hover {
+            background-color: #162fd2;
+        }
+
+        /* Define a cor de texto para a classe customizada 'primary-red' (vermelho escuro) */
+        .text-primary-red {
+            color: #162fd2;
+        }
+
+        /* Define a cor de texto no hover para a classe customizada 'primary-red' */
+        .hover\:text-primary-red:hover {
+            color: #162fd2;
+        }
+
+        /* Define a cor de texto no hover para a classe customizada 'secondary-red' (com o mesmo valor do primary-red) */
+        .hover\:text-secondary-red:hover {
+            color: #162fd2;
+        }
+
+        /* Define a cor de fundo para a classe customizada 'light-red' (vermelho claro) */
+        .bg-light-red {
+            background-color: #f0d4d4;
+        }
+
+        /* Define a cor de texto para a classe customizada 'dark-text' (cinza escuro) */
+        .text-dark-text {
+            color: #3E3142;
+        }
+
+        /* Define a cor de fundo para a classe customizada 'dark-bg' (vermelho escuro) */
+        .bg-dark-bg {
+            background-color: #162fd2;
+        }
+
+        /* Define a cor de texto para a classe customizada 'black-text' (preto) */
+        .text-black-text {
+            color: #000000;
+        }
+
+        /* Define a cor de fundo para a classe customizada 'gray-background' (cinza quase branco) */
+        .bg-gray-background {
+            background-color: #F9FAFB;
+        }
+
+        /* Define a cor da borda para a classe customizada 'primary-red' (vermelho escuro) */
+        .border-primary-red {
+            border-color: #162fd2;
+        }
+
+        /* Garante que a classe md:hidden (ocultar em telas maiores) funcione corretamente */
+        .md\:hidden {
+            display: none;
+        }
+
+        /* Estilos básicos para campos de formulário */
+        input,
+        textarea {
+            background-color: #fff;
+            color: #3E3142;
+            border-color: #162fd280;
+            font-family: 'Open Sans', 'Roboto', 'Lato', Arial, sans-serif;
+        }
+
+        /* Estilos aplicados quando o campo está focado */
+        input:focus,
+        textarea:focus {
+            /* Remove o outline padrão */
+            outline: none;
+            /* Cor da borda no foco */
+            border-color: #162fd280;
+            /*Sombra de foco*/
+            box-shadow: 0 0 0 2px #8B39A833;
+        }
+
+        /* Reforço de classes Tailwind com !important */
+        .bg-white {
+            background-color: #fff !important;
+        }
+
+        .text-gray-700 {
+            color: #3E3142 !important;
+        }
+
+        .text-gray-600 {
+            color: #6B7280 !important;
+        }
+
+        .text-gray-300 {
+            color: #D1D5DB !important;
+        }
+
+        .bg-gray-100 {
+            background-color: #F3F4F6 !important;
+        }
+
+        .bg-gray-200 {
+            background-color: #E5E7EB !important;
+        }
+
+        /* Redefine as sombras para usar uma cor vermelha/roxa semi-transparente */
+        .shadow-md,
+        .shadow-lg,
+        .shadow-sm,
+        .hover\:shadow-xl:hover {
+            box-shadow: 0 2px 16px 0 #162fd280 !important;
+        }
+
+        .border-white {
+            /* Redefine a cor da borda branca para quase preto */
+            border-color: #0f0f0f !important;
+        }
