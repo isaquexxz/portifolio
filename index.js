@@ -1,33 +1,39 @@
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzzoaqzo";
 
-        // Preenche o span com id 'current-year' no rodapé com o ano atual dinamicamente.
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
 
-        // Seleciona todos os links que apontam para âncoras internas (href="#secao")
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // 1. Preenche o ano no rodapé
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
 
-            // Adiciona um ouvinte de evento de clique
-            anchor.addEventListener('click', function (e) {
-                // Previne o comportamento padrão do link
-                e.preventDefault();
-                // Rola a tela até o elemento correspondente ao href e define a rolagem como suave (smooth scroll)
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+    // 2. Rolagem suave para links de âncora
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
-            });
+            }
         });
+    });
 
-        // Adiciona um evento de clique ao botão do menu móvel
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            // Alterna a classe Tailwind '-translate-x-full' na tag 'aside' (barra lateral),
-            // mostrando ou ocultando o menu móvel.
-            document.querySelector('aside').classList.toggle('-translate-x-full');
+    // 3. Toggle do menu móvel
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const asideElement = document.querySelector('aside');
+    if (mobileMenuBtn && asideElement) {
+        mobileMenuBtn.addEventListener('click', () => {
+            asideElement.classList.toggle('-translate-x-full');
         });
+    }
 
-        // =======================================================
-        // FUNÇÃO: Envio Assíncrono (fetch) e Feedback Local
-        // =======================================================
-        document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    // 4. Envio Assíncrono (fetch) do Formulário
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function (e) {
             // 1. Impede o envio padrão do formulário (que levaria para a página do Formspree)
             e.preventDefault();
 
@@ -91,3 +97,5 @@ const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzzoaqzo";
                 submitButton.textContent = 'Enviar Mensagem';
             }
         });
+    }
+});
