@@ -32,10 +32,6 @@ body {
     background-position: center;
 }
 
-/* ================================================= */
-/* PALETA DE CORES CUSTOMIZADA (Seu Azul Principal) */
-/* ================================================= */
-
 /* Cor Principal (AZUL) */
 .text-primary-red {
     color: #162fd2;
@@ -46,7 +42,7 @@ body {
     background-color: #000000;
 }
 
-/* Cor de Fundo para Elementos de Destaque Claro (vermelho claro original) */
+/* Cor de Fundo para Elementos de Destaque Claro (azul escuro original) */
 .bg-light-red {
     background-color: #f0d4d4;
 }
@@ -93,7 +89,7 @@ textarea:focus {
     /* Cor da borda no foco */
     border-color: #162fd280;
     /* Sombra de foco ajustada para o tom azul */
-    box-shadow: 0 0 0 2px #162fd233; /* Use uma cor de sombra mais próxima do azul */
+    box-shadow: 0 0 0 2px #162fd233; /*uma cor de sombra mais próxima do azul */
 }
 
 
