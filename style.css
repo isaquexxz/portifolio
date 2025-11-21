@@ -33,7 +33,7 @@ body {
 }
 
 /* Cor Principal (AZUL) */
-.text-primary-red {
+.text-primary-blue {
     color: #162fd2;
 }
 
@@ -43,8 +43,8 @@ body {
 }
 
 /* Cor de Fundo para Elementos de Destaque Claro (azul escuro original) */
-.bg-light-red {
-    background-color: #f0d4d4;
+.bg-light-blue {
+    background-color: #a1adec;
 }
 
 /* Cores de Texto Padrão (Clean Design) */
@@ -62,13 +62,13 @@ body {
 /* ================================================= */
 
 /* Cor de Hover para Botões/Links (Azul Escuro, usado no bg e nos links) */
-.hover\:bg-primary-red-dark:hover {
+.hover\:bg-primary-blue-dark:hover {
     background-color: #162fd2;
 }
-.hover\:text-primary-red:hover {
+.hover\:text-primary-blue:hover {
     color: #162fd2;
 }
-.hover\:text-secondary-red:hover {
+.hover\:text-secondary-blue:hover {
     color: #162fd2;
 }
 
@@ -137,7 +137,7 @@ textarea:focus {
 .text-black-text {
     color: #000000;
 }
-.border-primary-red {
+.border-primary-blue {
     border-color: #162fd2;
 }
 .md\:hidden {
