@@ -140,9 +140,6 @@ textarea:focus {
 .border-primary-blue {
     border-color: #162fd2;
 }
-.md\:hidden {
-    display: none;
-}
 
 /* ================================================= */
 /* ANIMAÇÃO DE ENTRADA (FADE IN) */
