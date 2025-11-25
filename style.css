@@ -57,9 +57,7 @@ body {
     background-color: #F9FAFB;
 }
 
-/* ================================================= */
-/* SOBRESCRIÇÕES E ESTILOS DE COMPONENTES */
-/* ================================================= */
+
 
 /* Cor de Hover para Botões/Links (Azul Escuro, usado no bg e nos links) */
 .hover\:bg-primary-blue-dark:hover {
@@ -93,9 +91,7 @@ textarea:focus {
 }
 
 
-/* ================================================= */
-/* REFORÇO DE CLASSES TAILWIND (Mantendo o !important onde necessário) */
-/* ================================================= */
+
 
 .text-gray-700 {
     color: #3E3142 !important;
@@ -141,11 +137,6 @@ textarea:focus {
     border-color: #162fd2;
 }
 
-/* ================================================= */
-/* ANIMAÇÃO DE ENTRADA (FADE IN) */
-/* ================================================= */
-
-/* Define a animação: começa invisível (opacidade 0) e termina totalmente visível (opacidade 1) */
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
